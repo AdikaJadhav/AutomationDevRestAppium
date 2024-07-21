@@ -1,7 +1,11 @@
 package com.CRM.Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import com.CRM.Utility.Utility;
 
 public class HomePage
 {
@@ -30,7 +34,9 @@ public class HomePage
 	
 	public String getStatusOfLink()
 	{
+		Utility.getScreenshot(driver);
 		driver.findElement(link).click();
+		Utility.getScreenshot(driver);
 		return driver.getCurrentUrl();
 	}
 
